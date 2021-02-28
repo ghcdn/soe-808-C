@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>hls player| soe-808-C </title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+
+<body>
+    <div id="movie" align="center">
+        <video id="video"  width=80% height="500" controls poster="./img/pic0.jpg"></video>
+        <p>[有码高清]SOE-808 欲情燃烧的女人 冲田杏梨</p>
+        <p>视频略缩图：</p>
+        <div id="thumb-pic">
+            <img src="./img/thumb01.jpg" width=24%> <img src="./img/thumb02.jpg" width=24%> <img src="./img/thumb03.jpg" width=24%> <img src="./img/thumb04.jpg" width=24%>
+            <img src="./img/thumb05.jpg" width=24%> <img src="./img/thumb06.jpg" width=24%> <img src="./img/thumb07.jpg" width=24%> <img src="./img/thumb08.jpg" width=24%>
+            <img src="./img/thumb09.jpg" width=24%> <img src="./img/thumb10.jpg" width=24%> <img src="./img/thumb11.jpg" width=24%> <img src="./img/thumb12.jpg" width=24%>
+            <img src="./img/thumb13.jpg" width=24%> <img src="./img/thumb14.jpg" width=24%> <img src="./img/thumb15.jpg" width=24%> <img src="./img/thumb16.jpg" width=24%>
+        </div>
+        <script>
+        var video = document.getElementById('video');
+        var videoSrc = 'https://cdn.jsdelivr.net/gh/ghcdn/soe-808-C/res/index.m3u8';
+        if (Hls.isSupported()) {
+            var hls = new Hls();
+            hls.loadSource(videoSrc);
+            hls.attachMedia(video);
+        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+            video.src = videoSrc;
+        }
+        </script>
+    </div>
+</body>
+
+</html>
